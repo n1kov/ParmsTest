@@ -1,0 +1,14 @@
+NAME: При поиске в яндексе музыке по запросу {TEST DATA[0]} в результатах отображаются композиции в названиях которых содержится текст {TEST DATA[1]}
+TEST DATA: [
+        [Astrud Gilberto / The girl from Ipanema],
+        [João Gilberto / Corcovado]
+      ]
+PRIORITY: CRITICAL
+PRECONDITIONS:
+  - Открыт браузер
+  - Находимся на стартовой странице music.yandex.ru/radio
+STEPS:
+    - В поле поиска ввести текст {TEST DATA[0]}
+    - Нажать Enter
+EXPECTED RESULT:
+    - В результатах отображаются композиции, названия которых содержит текст {TEST DATA[1]}

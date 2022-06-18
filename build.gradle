@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'qa.guru'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter:5.8.1',
+            'com.google.guava:guava:31.1-jre',
+            'com.codeborne:selenide:6.5.1')
+}
+
+test {
+    useJUnitPlatform()
+}
